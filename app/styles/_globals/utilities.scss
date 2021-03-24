@@ -61,6 +61,13 @@
 	transform: translate(-50%, -50%);
 }
 
+.pos-full {
+	position: absolute;
+	top: 0;
+	left: 0;
+	@extend .fullsize;
+}
+
 .btn {
 	cursor: pointer;
 	user-select: none;
@@ -73,4 +80,33 @@
 	padding: 0.8rem 1.6rem;
 	transition: 0.3s all ease-in-out;
 	border-radius: 0.3rem;
+}
+
+.cat-labels {
+	.term-color-primary {
+		--color-labels: #{$hvh-primary-color};
+	}
+	.term-color-danger {
+		--color-labels: #{$hvh-danger-color};
+	}
+	a {
+		color: $hvh-white-color;
+		background: var(--color-labels);
+		border-radius: 2px;
+		font-size: 1rem;
+		font-weight: 600;
+		letter-spacing: 0.035em;
+		padding: 0 8px;
+		text-transform: uppercase;
+		line-height: 22px;
+	}
+}
+
+.grid {
+	display: grid;
+}
+
+.grid-2 {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-gap: 16px;
 }

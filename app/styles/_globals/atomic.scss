@@ -110,15 +110,15 @@
 	left: 0;
 }
 .pt-section {
-	padding-top: 5rem;
+	padding-top: 2rem;
 	@media (min-width: 1200px) {
-		padding-top: 8rem;
+		padding-top: 4rem;
 	}
 }
 .pb-section {
-	padding-bottom: 5rem;
+	padding-bottom: 2rem;
 	@media (min-width: 1200px) {
-		padding-bottom: 8rem;
+		padding-bottom: 4rem;
 	}
 }
 .pd-section {
@@ -126,15 +126,15 @@
 	@extend .pb-section;
 }
 .mt-section {
-	margin-top: 5rem;
+	margin-top: 2rem;
 	@media (min-width: 1200px) {
-		margin-top: 8rem;
+		margin-top: 4rem;
 	}
 }
 .mb-section {
-	margin-bottom: 5rem;
+	margin-bottom: 2rem;
 	@media (min-width: 1200px) {
-		margin-bottom: 8rem;
+		margin-bottom: 4rem;
 	}
 }
 .mr-section {

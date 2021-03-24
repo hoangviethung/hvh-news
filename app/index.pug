@@ -2,6 +2,42 @@ extends views/_layouts/layout
 
 block var
 	- bodyClass = "index-page"
-	- pageTitle = "Gold Smile"
+	- pageTitle = "H.V.H | News"
 block main
-	include ./views/_index/i-1
+	include ./views/_components/gird-items-large
+	section.elementor-section.pt-section
+		.container
+			.row
+				.col-lg-9
+					.elementor-widget-container
+						.elementor-widget.tab-ajax-filter-container
+							.block-head
+								h4
+									span.color Latest 
+									| Articles
+								ul.ajax-filter-navigation
+									li.item.active(data-url="#") All
+									li.item(data-url="#") Fitness
+									li.item(data-url="#") Travel
+									li.item(data-url="#") World
+							.ajax-filter-content
+								.grid.grid-2
+									.item-gird
+										.media
+											a.image-link(href="#")
+												img.object-cover.lazyload.blur-up(src=`images/hot-news/1.jpg`, alt="H.V.H")
+										.content-wrap
+											.content
+												h3.lcl.lcl-2.post-title World Renown Speaker Zackery Has  Politicians Stumped
+												.post-meta
+													.post-meta-items.meta-below
+														span.meta-item.post-author
+															span.by By
+															a(href="#") Jane Doe
+														span.meta-item.has-next-icon
+															a(href="#").date-link Jan 10, 2021
+									.item-gird
+										.media
+											a.image-link(href="#")
+												img.object-cover.lazyload.blur-up(src=`images/hot-news/1.jpg`, alt="H.V.H")
+				.col-lg-3
