@@ -89,6 +89,9 @@
 	.term-color-danger {
 		--color-labels: #{$hvh-danger-color};
 	}
+	.term-color-pink {
+		--color-labels: #d6456a;
+	}
 	a {
 		color: $hvh-white-color;
 		background: var(--color-labels);
@@ -106,7 +109,17 @@
 	display: grid;
 }
 
+.grid-1 {
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+	grid-gap: 24px;
+}
+
 .grid-2 {
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	grid-gap: 16px;
+}
+
+.grid-3 {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-gap: 4px;
 }

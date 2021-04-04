@@ -10,34 +10,43 @@ block main
 			.row
 				.col-lg-9
 					.elementor-widget-container
-						.elementor-widget.tab-ajax-filter-container
-							.block-head
-								h4
-									span.color Latest 
-									| Articles
-								ul.ajax-filter-navigation
-									li.item.active(data-url="#") All
-									li.item(data-url="#") Fitness
-									li.item(data-url="#") Travel
-									li.item(data-url="#") World
+						.elementor-widget
+							include ./views/_components/tab-ajax-filter
 							.ajax-filter-content
-								.grid.grid-2
-									.item-gird
-										.media
-											a.image-link(href="#")
-												img.object-cover.lazyload.blur-up(src=`images/hot-news/1.jpg`, alt="H.V.H")
-										.content-wrap
-											.content
-												h3.lcl.lcl-2.post-title World Renown Speaker Zackery Has  Politicians Stumped
-												.post-meta
-													.post-meta-items.meta-below
-														span.meta-item.post-author
-															span.by By
-															a(href="#") Jane Doe
-														span.meta-item.has-next-icon
-															a(href="#").date-link Jan 10, 2021
-									.item-gird
-										.media
-											a.image-link(href="#")
-												img.object-cover.lazyload.blur-up(src=`images/hot-news/1.jpg`, alt="H.V.H")
+								.loop.loop-gird.grid.grid-2
+									-for(i=0;i<2;i++)
+										include ./views/_components/gird-post
+								.loop.loop-small.grid.grid-2
+									-for(j=0;j<6;j++)
+										include ./views/_components/gird-post-flex-sm
+					.elementor-widget-container
+						.elementor-widget
+							include ./views/_components/tab-ajax-filter
+							.ajax-filter-content
+								.loop.loop-gird.grid.grid-2
+									include ./views/_components/gird-post
+									.loop.grid.grid-2
+										-for(j=0;j<4;j++)
+											include ./views/_components/gird-post-small
+					.elementor-widget-container
+						.elementor-widget
+							include ./views/_components/tab-ajax-filter
+							.ajax-filter-content
+								.loop.loop-gird.grid.grid-2
+									-for(i=0;i<4;i++)
+										include ./views/_components/gird-post-description
+					.elementor-widget-container
+						.elementor-widget
+							include ./views/_components/tab-ajax-filter
+							.ajax-filter-content
+								.loop.loop-gird.grid.grid-3
+									-for(i=0;i<3;i++)
+										include ./views/_components/gird-post-content-inside
+					.elementor-widget-container
+						.elementor-widget
+							include ./views/_components/tab-ajax-filter
+							.ajax-filter-content
+								.loop.loop-gird.grid.grid-1
+									-for(i=0;i<3;i++)
+										include ./views/_components/gird-post-flex
 				.col-lg-3
